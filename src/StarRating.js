@@ -18,11 +18,11 @@ class StarRating extends Component {
 
   handleClick(index) {
     this.setState({ stars_selected : index});
-    console.log('New state: ' + this.state.stars_selected);
+    //console.log('New state: ' + this.state.stars_selected);
   }
 
   render() {
-    console.log('Rendered state: ' + this.state.stars_selected);
+    //console.log('Rendered state: ' + this.state.stars_selected);
     return (
       <div className="StarRating">
         <FontAwesomeIcon icon={this.state.stars_selected > 0 ? fasStar : farStar} size="3x" onClick={() => this.handleClick(1)}/>
