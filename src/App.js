@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import StarRating from './StarRating'
+import StarRating from './starRating'
+import FormRating from './formRating'
 
 class App extends Component {
 
   render() {
+    const items = [
+        "Classifique a capacidade tecnica.",
+        "Como você vê a comunicação com a equipe?",
+        "No geral, como você avalia?",
+    ];
 
     return (
       <div className="App">
@@ -16,9 +22,9 @@ class App extends Component {
         </header>
 
         <div style={{paddingTop: 1+'em'}}>
-          <StarRating/>
+          <FormRating items={items} onClick={(data)=> {console.log("Form Submited: "+data)}}/>
         </div>
-        
+
       </div>
     );
   }
